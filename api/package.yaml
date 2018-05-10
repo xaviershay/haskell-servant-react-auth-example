@@ -1,0 +1,76 @@
+name:                haskell-servant-spa-auth-example
+version:             0.1.0.0
+github:              "xaviershay/haskell-servant-spa-auth-example"
+license:             MIT
+author:              "Xavier Shay"
+maintainer:          "contact@xaviershay.com"
+copyright:           "2018 Xavier Shay"
+
+extra-source-files: []
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on Github at <https://github.com/xaviershay/haskell-servant-spa-auth-example>
+
+dependencies:
+- base >= 4.7 && < 5
+- bytestring
+- containers
+- unordered-containers
+- http-conduit
+- http-types
+- connection
+- text
+- time
+- servant
+- servant-foreign
+- servant-js
+- servant-server
+- servant-auth-server
+- servant-options
+- unix
+- wai
+- exceptions
+- wai-cors
+- wai-extra
+- warp
+- aeson
+- lens
+- http-media
+- jose
+- mtl
+- http-client
+- http-client-tls
+
+library:
+  source-dirs: src
+
+executables:
+  haskell-servant-spa-auth-example:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -W
+    dependencies:
+      - text
+      - time
+      - haskell-servant-spa-auth-example
+
+tests:
+  haskell-servant-spa-auth-example-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskell-servant-spa-auth-example

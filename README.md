@@ -3,9 +3,8 @@ Haskell Servant React Auth Example
 
 This applications demonstrates
 
-* A decoupled (i.e. hosted on different ports) backend Haskell Servant API server with a React
-  single page application front end.
-* Using implict OAuth (via google) and JWT for authentication.
+* A decoupled (i.e. hosted on different ports) backend Haskell Servant API server with a vanilla `create-react-app` React single page application front end.
+* Using implict OAuth (via Google) and JWT for authentication.
 * Custom JS API client code generation.
 
 Most examples of this kind of thing handle authentication by serving up a
