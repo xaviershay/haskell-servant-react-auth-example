@@ -50,3 +50,5 @@ using tmux and vim:
   backend for automated integration testing though.
 * Logging isn't thread-safe. The currently used `putStrLn` will often
   intersperse concurrent log entries.
+* The environment (development or production) is hard-coded into the API. This
+  should be read from the environment.
